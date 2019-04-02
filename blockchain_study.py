@@ -8,7 +8,7 @@ class Blockchain(object):
 	def __init__(self):
 		self.chain = [] # blocks' chain
 		self.current_transactions = [] # transaction list that is writed when the blockchain created
-		self.nodes = set() # 
+		self.nodes = set() # use set() to eliminate redundancy
 
 		#create genesis block(the first block)
 		self.add_new_block(proof=100, genesis_hash='1')
@@ -118,12 +118,21 @@ class Blockchain(object):
 				return False
 		return True
 
+	def register_node(self, address):
+		"""
+		register a new node in the existing node list
+		use: request to register in the fomm of 'http://ip:port'.
+		
+		:param address: <string> (ex)127.0.0.1:52273
+		"""
+		parsed_url = urlparse(address)
+		self.nodes.add(parsed_url.netloc)
+
 	def resolve_conflicts(self):
 		"""
-		이 곳이 우리의 합의 알고리즘이다.
-	    노드 중에서 가장 긴 체인을 가지고 있는 노드의 체인을 유효한 것으로 인정한다.
+		Algorithm agreement:
+		the node having the longest chain is considered valid.
 		"""
-
 		neighbours = self.nodes
 		new_chain = None
 
@@ -136,7 +145,7 @@ class Blockchain(object):
 				length = response.json()['length']
 				chain = response.json()['chain']
 
-				if length > max_legth and self.is_valid_chain(chain):
+				if length > max_legth and self._is_valid_chain(chain):
 					max_length = length
 					nex_chain = chain
 
@@ -146,9 +155,9 @@ class Blockchain(object):
 
 		return False
 
-	def is_valid_chain(self, chain):
+	def _is_valid_chain(self, chain):
 		"""
-		주어진 체인이 유효한지를 결정한다.
+		decide whether the chain is valid.
 		"""
 
 		last_block = chain[0]

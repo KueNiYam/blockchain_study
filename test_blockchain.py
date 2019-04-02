@@ -79,5 +79,10 @@ class Test_testcase(unittest.TestCase):
 		self.assertFalse(self.blockchain._are_first_four_zero('000'))
 		self.assertTrue(self.blockchain._are_first_four_zero('0000'))
 
+	def test_register_node(self):
+		print('register_node')
+		self.blockchain.register_node('https://127.0.0.1:52273/index.html')
+		self.assertEqual(self.blockchain.nodes, {'127.0.0.1:52273'})
+
 if __name__ == '__main__':
     unittest.main()
