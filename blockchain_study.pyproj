@@ -22,7 +22,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="blockchain_study.py" />
-    <Compile Include="server.py">
+    <Compile Include="peer.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="test_blockchain.py">
