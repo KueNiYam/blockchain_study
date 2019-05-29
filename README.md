@@ -74,6 +74,6 @@ python flask
 **resolve_conflicts()** 는 모든 이웃 노드들로 하여금, 그들의 체인을 다운 받고 위의 규칙에 의거(가장 긴 체인이 맞는 체인이다)하여 유효한 체인(가장 긴 체인을 보유하고 있는지)인지를 확인하는 함수이다. 만약에 valid chain 이 우리의 것보다 더 길다면, 우리 것은 대체된다.
 
 # 참고
-[블록체인 개념 완벽 정리](https://banksalad.com/contents/%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8-%EA%B0%9C%EB%85%90-%EC%99%84%EB%B2%BD-%EC%A0%95%EB%A6%AC-dh1do)
-[파이썬으로 블록체인 만들기 Part 1](https://medium.com/caulink/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9C%BC%EB%A1%9C-%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-part-1-4386dbc735e)
-[파이썬으로 블록체인 만들기 Part 2](https://medium.com/caulink/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9C%BC%EB%A1%9C-%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-part-2-633bb0555221)
+ - [블록체인 개념 완벽 정리](https://banksalad.com/contents/%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8-%EA%B0%9C%EB%85%90-%EC%99%84%EB%B2%BD-%EC%A0%95%EB%A6%AC-dh1do)
+ - [파이썬으로 블록체인 만들기 Part 1](https://medium.com/caulink/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9C%BC%EB%A1%9C-%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-part-1-4386dbc735e)
+ - [파이썬으로 블록체인 만들기 Part 2](https://medium.com/caulink/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9C%BC%EB%A1%9C-%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-part-2-633bb0555221)
